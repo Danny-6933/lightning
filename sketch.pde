@@ -7,7 +7,7 @@ int yChange;
 int yRange;
 int xMax;
 int xMin;
-float stroke;
+float strokeW;
 double run;
 int cloud;
 int cloud2;
@@ -17,7 +17,7 @@ void setup() {
   background(140, 160, 195);
   xStart = 200;
   yStart = 0;
-  stroke = 10.0;
+  strokeW = 10.0;
   xMax = 400;
   xMin = 0;
   cloud = -50;
@@ -27,7 +27,7 @@ void setup() {
 
 void draw() {
   fill(140, 160, 195, 100);
-  rect(0,0,400,600);
+  rect(0,0,width,height);
   
   stroke(140,140,140);
   fill(140,140,140);
@@ -45,7 +45,7 @@ void draw() {
   backCloud();
   
   run = Math.random();
-  if (run < .037) {
+  if (run < .04) {
     strike();
   }
   cloud += 2;
@@ -62,9 +62,9 @@ void strike() {
   yRange = (int)(Math.random()*400)+400;
   xStart = (int)(Math.random()*400);
   while (yEnd < yRange) {
-    stroke = stroke * 0.97;
-    if (stroke > 0){ 
-      strokeWeight(stroke); }
+    strokeW = strokeW * 0.97;
+    if (strokeW > 0){ 
+      strokeWeight(strokeW); }
     xChange = (int)(Math.random()*20 - 10);
     yChange = (int)(Math.random()*7 + 3);
     xEnd = xStart + xChange;
@@ -75,7 +75,7 @@ void strike() {
   }
   yStart = 0;
   yEnd = 2;
-  stroke = 10;
+  strokeW = 10;
   
 }
 
