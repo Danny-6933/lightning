@@ -37,9 +37,9 @@ void draw() {
   ellipse(50,95,230,90);
 
   
-  cloud2 -= 1;
-  if (cloud2 < -50) {
-    cloud2 = 450;
+  cloud2 += 1;
+  if (cloud2 > 450) {
+    cloud2 = -50;
   }
   
   backCloud();
@@ -48,7 +48,7 @@ void draw() {
   if (run < .04) {
     strike();
   }
-  cloud += 2;
+  cloud += 3;
   if (cloud > 447) {
   cloud = -50;
   }
