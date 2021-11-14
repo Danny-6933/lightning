@@ -27,7 +27,7 @@ void setup() {
 
 void draw() {
   fill(140, 160, 195, 100);
-  rect(0,0,width,height);
+  rect(0,0,400,600);
   
   stroke(140,140,140);
   fill(140,140,140);
